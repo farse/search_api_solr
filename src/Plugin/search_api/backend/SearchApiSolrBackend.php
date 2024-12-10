@@ -1899,7 +1899,7 @@ class SearchApiSolrBackend extends BackendPluginBase implements SolrBackendInter
               if ($boosts = $query->getOption('solr_document_boost_factors', [])) {
                 $sum[] = 'boost_document';
                 foreach ($boosts as $field_id => $inner_boosts) {
-                  // Check to see if $inner_boosts is an array to account
+                  // Check to see if $inner_boosts is an array to
                   // allow mulitple boosts per field.
                   if (is_array($inner_boosts)) {
                       foreach ($inner_boosts as $boost) {
